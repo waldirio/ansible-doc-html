@@ -69,9 +69,10 @@ create_html_menu()
   all_types=$(ls $DOC_DIR | grep -E -v '(index.html|menu.html|initial.html)' | cut -d"-" -f1 | sort -u)
   for current_type in $all_types
   do
+    count=$(ls $DOC_DIR/${current_type}-* | wc -l)
     echo "
     <div class=\"container\">
-    <button type=\"button\" class=\"btn btn-info button\" data-toggle=\"collapse\" data-target=\"#$current_type\">$current_type</button>
+    <button type=\"button\" class=\"btn btn-info button\" data-toggle=\"collapse\" data-target=\"#$current_type\">$current_type - $count</button>
     <div id=\"$current_type\" class=\"collapse\">
     " >>$DOC_DIR/menu.html
   
