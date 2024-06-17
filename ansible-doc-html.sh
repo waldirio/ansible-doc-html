@@ -63,13 +63,21 @@ create_html_menu()
     </style>
   </head>
   <body>
+    <div class=\"container\">
   " >$DOC_DIR/menu.html
   # some code here v
-  
+
+  all_types_to_collapse_expand=$(ls $DOC_DIR | grep -E -v '(index.html|menu.html|initial.html)' | cut -d"-" -f1 | sort -u | sed -e 's/^/#/g' | tr '\n' ',' | sed 's/,$//g')
+
+  echo "
+        <button type=\"button\" class=\"btn btn-info button\" data-toggle=\"collapse\" data-target=\"$all_types_to_collapse_expand\">Expand All / Collapse All</button>
+    </div>
+  " >>$DOC_DIR/menu.html
+
   all_types=$(ls $DOC_DIR | grep -E -v '(index.html|menu.html|initial.html)' | cut -d"-" -f1 | sort -u)
   for current_type in $all_types
   do
-    count=$(ls $DOC_DIR/${current_type}-* | wc -l)
+    count=$(ls $DOC_DIR/${current_type}-* | wc -l | awk '{print $1}')
     echo "
     <div class=\"container\">
     <button type=\"button\" class=\"btn btn-info button\" data-toggle=\"collapse\" data-target=\"#$current_type\">$current_type - $count</button>
@@ -96,6 +104,6 @@ create_html_menu()
   " >>$DOC_DIR/menu.html
 }
 
-# check_requirement
-# collect_info
+check_requirement
+collect_info
 create_html_menu

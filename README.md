@@ -17,7 +17,9 @@ A directory named `doc` will be created, with a bunch of files, but the one that
 
 ![become sub menu](assets/become_sub_menu.png)
 
-![ansible.builtin.copy module](assets/dzdo.png)
+![dzdo module](assets/dzdo.png)
+
+![all expanded](assets/all_expanded.png)
 
 I hope you enjoy it, and please, feel free to submit issues to fix and/or improve it. I'll be more than glad to help!
 
