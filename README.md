@@ -8,16 +8,26 @@ Once I'm a good friend, I created this script, that will check all the types tha
 
 Just download the bash, or clone the repo, as you wish, after that, you can simply execute it
 ```
-./ansible-doc-html.sh
+$ wget https://raw.githubusercontent.com/waldirio/ansible-doc-html/main/ansible-doc-html.sh
+$ chmod +x ansible-doc-html.sh
+$ ./ansible-doc-html.sh
 ```
 
-A directory named `doc` will be created, with a bunch of files, but the one that you need to open, is `index.html`. From there, you will be able to navigate, check all the documentation, search, copy and paste.
+A directory named `doc` will be created, with a bunch of files, but the one that you need to open is `index.html`. From there, you will be able to navigate, check all the documentation, search, copy and paste.
+
+### The main page
 
 ![main page](assets/web_main.png)
 
+### Expanding a single type, in this case, become
+
 ![become sub menu](assets/become_sub_menu.png)
 
+### Searching by a specific word, in this case, dzdo
+
 ![dzdo module](assets/dzdo.png)
+
+### Expanding all of them in a single click, then you can proceed with CTRL+F or COMMAND+F
 
 ![all expanded](assets/all_expanded.png)
 

@@ -36,7 +36,7 @@ collect_info()
 create_html_menu()
 {
   echo "
-  <html>
+<html>
   <frameset cols=\"30%, 70%\">
     <frame src=\"menu.html\" name=\"frame1\"/>
     <frame src=\"initial.html\" name=\"frame2\"/>
@@ -45,7 +45,13 @@ create_html_menu()
   " >$DOC_DIR/index.html
 
   echo "
-  Please, click on the module you would like more information on the left menu
+  <center>  
+  <h1>Please, click on the module you would like more information on the left menu
+  <br>
+
+  <---
+  </h1>
+  </center>
   " >$DOC_DIR/initial.html
 
   echo "
@@ -63,6 +69,14 @@ create_html_menu()
     </style>
   </head>
   <body>
+
+
+    &nbsp;&nbsp;&nbsp;More info about this project?
+    <br>
+    &nbsp;&nbsp;&nbsp;<a href=\"https://github.com/waldirio/ansible-doc-html\" target=\"_blank\">click here!</a>
+    <br>
+    <br>
+
     <div class=\"container\">
   " >$DOC_DIR/menu.html
   # some code here v
