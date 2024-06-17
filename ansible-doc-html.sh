@@ -56,6 +56,11 @@ create_html_menu()
     <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">
     <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js\"></script>
     <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js\"></script>
+    <style>
+        .button {
+            width: 200px;
+        }
+    </style>
   </head>
   <body>
   " >$DOC_DIR/menu.html
@@ -66,7 +71,7 @@ create_html_menu()
   do
     echo "
     <div class=\"container\">
-    <button type=\"button\" class=\"btn btn-info\" data-toggle=\"collapse\" data-target=\"#$current_type\">$current_type</button>
+    <button type=\"button\" class=\"btn btn-info button\" data-toggle=\"collapse\" data-target=\"#$current_type\">$current_type</button>
     <div id=\"$current_type\" class=\"collapse\">
     " >>$DOC_DIR/menu.html
   
@@ -90,6 +95,6 @@ create_html_menu()
   " >>$DOC_DIR/menu.html
 }
 
-check_requirement
-collect_info
+# check_requirement
+# collect_info
 create_html_menu
