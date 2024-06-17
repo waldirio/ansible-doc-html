@@ -8,7 +8,9 @@ Once I'm a good friend, I created this script, that will check all the types tha
 
 Just download the bash, or clone the repo, as you wish, after that, you can simply execute it
 ```
-./ansible-doc-html.sh
+$ wget https://raw.githubusercontent.com/waldirio/ansible-doc-html/main/ansible-doc-html.sh
+$ chmod +x ansible-doc-html.sh
+$ ./ansible-doc-html.sh
 ```
 
 A directory named `doc` will be created, with a bunch of files, but the one that you need to open, is `index.html`. From there, you will be able to navigate, check all the documentation, search, copy and paste.
